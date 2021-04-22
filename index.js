@@ -32,21 +32,32 @@ console.log(0 == '')
 
 //var is global scope, hence you will have to create multiple variables which will use up more memory space.
 // issues with var : hosting.
-// hositing means : JS takes all variable declarations to top, before executing the code.
+// hosting means : JS takes all variable declarations to top of the scope, before executing the code.
 
 var name = 'salesforce'
 if(5>3){
   name = 'aish'
 }
-console.log(name);
+console.log(name); // result aish
 
-// hositing example
+// hosting example
 console.log(age) // this will return undefined, because the line var age will be moved to top.
 var age = '25'
 
 // let was introduced in ES6.
-// solves the hositing problem.
+// solves the hosting problem.
 // let is blocked scope
 // let can be updated, but not redeclared.
 
+let proj = 'JS for LWC'
+if(5>3){
+  let proj = 'LWC'
+  console.log(proj)
+}
+console.log(proj)
 
+// const was introduced in ES6.
+// solves the hosting problem.
+// const is blocked scope
+// const cannot be updated or redeclared.
+// if if const is object then you can update its attributes.
